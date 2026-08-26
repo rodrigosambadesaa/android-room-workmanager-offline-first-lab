@@ -1,0 +1,1 @@
+package com.rodrigosambade.offlinefirst; import androidx.room.*; @Entity(tableName="notes") public class NoteEntity{@PrimaryKey(autoGenerate=true) public long id; public String text; public boolean synced; public long createdAt; public NoteEntity(String text,boolean synced,long createdAt){this.text=text;this.synced=synced;this.createdAt=createdAt;}}

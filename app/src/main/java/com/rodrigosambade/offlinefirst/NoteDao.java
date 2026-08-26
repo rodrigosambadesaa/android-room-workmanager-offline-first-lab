@@ -1,0 +1,1 @@
+package com.rodrigosambade.offlinefirst; import androidx.room.*;import java.util.*;@Dao public interface NoteDao{@Insert long insert(NoteEntity n);@Query("SELECT * FROM notes ORDER BY createdAt DESC") List<NoteEntity> all();@Query("SELECT * FROM notes WHERE synced = 0") List<NoteEntity> pending();@Query("UPDATE notes SET synced = 1 WHERE id = :id") void markSynced(long id);}
