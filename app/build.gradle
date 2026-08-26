@@ -11,17 +11,17 @@ android {
         targetSdk 37
         versionCode 1
         versionName '1.0'
-
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-
 }
 
 dependencies {
-    implementation "androidx.room:room-runtime:2.8.4"
-    annotationProcessor "androidx.room:room-compiler:2.8.4"
+    // Room 2.7.2 is deliberately pinned here. Its Java annotation processor is
+    // proven stable for this Java-only sample and keeps the DAO API idiomatic.
+    implementation "androidx.room:room-runtime:2.7.2"
+    annotationProcessor "androidx.room:room-compiler:2.7.2"
     implementation "androidx.work:work-runtime:2.11.2"
 }
